@@ -18,11 +18,7 @@ export const CheckInButton = ({ task, hasCheckedIn, onCheckIn }: CheckInButtonPr
     }
   };
 
-  const frequencyText = {
-    daily: '每天',
-    weekly: '每周',
-    monthly: '每月',
-  };
+  const frequencyText: Record<string, string> = { daily: '每天', weekly: '每周', monthly: '每月' };
 
   return (
     <div className="checkin-card">
@@ -39,11 +35,7 @@ export const CheckInButton = ({ task, hasCheckedIn, onCheckIn }: CheckInButtonPr
         {hasCheckedIn ? '✓ 已打卡' : '打卡'}
       </button>
 
-      {showMessage && (
-        <div className="success-message">
-          打卡成功！
-        </div>
-      )}
+      {showMessage && <div className="success-message">打卡成功！</div>}
     </div>
   );
 };
